@@ -14,25 +14,27 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-icon">
-                    <!-- Вместо бочки/машины — стильная капля-волна -->
                     <div class="water-icon">💧</div>
                 </div>
                 <h1 class="hero-title">Доставка воды <span>в Донецке</span></h1>
-                <p class="hero-subtitle">Самая чистая вода по лучшим ценам Донецка</p>
                 
+                <!-- Ротатор слоганов -->
+                <div class="slogan-rotator" id="sloganRotator">
+                    <span class="slogan-text">💪 Доставка воды без боли в спине</span>
+                </div>
+
                 <div class="features-badge">
-                    <span>🚛 До 2 тонн за заказ</span>
-                    <span>🏢 До 14 этажа</span>
-                    <span>📍 Любые районы Донецка</span>
+                    <div class="feature-card">🚛 До 2 кубов воды за раз</div>
+                    <div class="feature-card">💧 От 100 литров</div>
+                    <div class="feature-card">🏢 До 14 этажа</div>
+                    <div class="feature-card">📍 Любые районы Донецка</div>
                 </div>
 
                 <div class="order-block">
                     <div class="price-min">Заказ от 1 500 ₽</div>
-                    <a href="tel:+79991234567" class="btn btn-primary" id="orderBtn">
-                        📞 Оформить заказ
-                    </a>
+                    <button class="btn btn-primary" id="openWaterModalBtn">📞 Оформить заказ</button>
                     <div class="phone-link-block">
-                        <a href="tel:+79991234567" class="phone-link">+7 (999) 123-45-67</a>
+                        <a href="tel:+79494010811" class="phone-link">+7 949 401 08 11</a>
                         <span class="phone-hint">Нажмите на номер, чтобы позвонить</span>
                     </div>
                 </div>
@@ -40,7 +42,7 @@
         </div>
     </section>
 
-    <!-- Акция с таймером (имба) -->
+    <!-- Акция с таймером -->
     <section class="promo-timer">
         <div class="container">
             <div class="timer-card">
@@ -67,11 +69,11 @@
                 <div class="route-group">
                     <h3>🚚 Межгород</h3>
                     <div class="route-list">
-                        <div class="route-item">Донецк → Мариуполь</div>
-                        <div class="route-item">Донецк → Урзуф</div>
-                        <div class="route-item">Донецк → Бердянск</div>
-                        <div class="route-item">Донецк → Ростов-на-Дону</div>
-                        <div class="route-item">Донецк → Краснодар</div>
+                        <div class="route-item city-modal-trigger" data-city="donetsk-mariupol">Донецк → Мариуполь</div>
+                        <div class="route-item city-modal-trigger" data-city="donetsk-urzuf">Донецк → Урзуф</div>
+                        <div class="route-item city-modal-trigger" data-city="donetsk-berdyansk">Донецк → Бердянск</div>
+                        <div class="route-item city-modal-trigger" data-city="donetsk-rostov">Донецк → Ростов-на-Дону</div>
+                        <div class="route-item city-modal-trigger" data-city="donetsk-krasnodar">Донецк → Краснодар</div>
                     </div>
                 </div>
                 <div class="route-group">
@@ -84,16 +86,64 @@
                 </div>
             </div>
             <div class="cargo-contact">
-                <a href="tel:+79991234567" class="btn btn-secondary">📦 Заказать грузоперевозку</a>
+                <button class="btn btn-secondary" id="openCargoModalBtn">📦 Заказать грузоперевозку</button>
             </div>
         </div>
     </section>
 
-    <!-- Подвал с повторным номером -->
+    <!-- Плавающие иконки снизу -->
+    <div class="floating-icons">
+        <a href="tel:+79494010811" class="float-icon" title="Позвонить">📞</a>
+        <a href="https://t.me/ZaharSok" target="_blank" class="float-icon" title="Telegram">📱</a>
+        <a href="#" class="float-icon vk-disabled" title="ВК (скоро)">📘</a>
+        <a href="https://t.me/Ivanka58" target="_blank" class="float-icon" title="Техподдержка">🛠️</a>
+    </div>
+
+    <!-- Круг техподдержки (появляется при скролле) -->
+    <div class="support-circle" id="supportCircle" style="display: none;">
+        <div class="support-bubble" id="supportBubble">Какбудто прям сейчас печатают...</div>
+        <div class="support-icon" id="supportIcon">💬</div>
+    </div>
+
+    <!-- Модальное окно для воды -->
+    <div id="waterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Оформить заказ воды</h3>
+            <div class="modal-buttons">
+                <a href="https://t.me/ZaharSok" target="_blank" class="modal-option telegram">📱 Заказать в Telegram</a>
+                <button class="modal-option vk" id="vkTempBtn">📘 Заказать в ВК (скоро)</button>
+                <a href="tel:+79494010811" class="modal-option phone">📞 Заказать по номеру телефона</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для грузоперевозок -->
+    <div id="cargoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Заказать грузоперевозку</h3>
+            <div class="modal-buttons">
+                <a href="https://t.me/ZaharSok" target="_blank" class="modal-option telegram">📱 Заказать в Telegram</a>
+                <button class="modal-option vk" id="vkCargoTempBtn">📘 Заказать в ВК (скоро)</button>
+                <a href="tel:+79494010811" class="modal-option phone">📞 Заказать по номеру телефона</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для города (стоимость) -->
+    <div id="cityModal" class="modal">
+        <div class="modal-content city-modal-content">
+            <span class="close">&times;</span>
+            <h3 id="cityModalTitle">Донецк → Город</h3>
+            <p id="cityModalPrice" class="city-price">Приблизительная стоимость: уточняйте</p>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <p>© Доставка воды Донецк — чистая вода для вашего дома</p>
-            <a href="tel:+79991234567" class="footer-phone">+7 (999) 123-45-67</a>
+            <a href="tel:+79494010811" class="footer-phone">+7 949 401 08 11</a>
             <p class="small">Работаем для вас ежедневно</p>
         </div>
     </footer>
