@@ -188,3 +188,16 @@ style.textContent = `
 }
 `;
 document.head.appendChild(style);
+// FAQ аккордеон
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        
+        if (!isOpen) {
+            item.classList.add('open');
+        }
+    });
+});
