@@ -18,9 +18,9 @@
                 </div>
                 <h1 class="hero-title">Доставка воды <span>в Донецке</span></h1>
                 
-                <!-- Ротатор слоганов -->
-                <div class="slogan-rotator" id="sloganRotator">
-                    <span class="slogan-text">💪 Доставка воды без боли в спине</span>
+                <!-- Слоган с анимацией печати -->
+                <div class="slogan-rotator">
+                    <div class="slogan-text" id="typingSlogan"></div>
                 </div>
 
                 <div class="features-badge">
@@ -59,7 +59,7 @@
         </div>
     </section>
 
-    <!-- Услуги грузоперевозок и межгород -->
+    <!-- Услуги грузоперевозок -->
     <section class="cargo">
         <div class="container">
             <h2 class="section-title">Также предоставляем услуги <span>грузоперевозок</span></h2>
@@ -91,62 +91,64 @@
         </div>
     </section>
 
-    <!-- Плавающие иконки снизу -->
-    <div class="floating-icons">
-        <a href="tel:+79494010811" class="float-icon" title="Позвонить">📞</a>
-        <a href="https://t.me/ZaharSok" target="_blank" class="float-icon" title="Telegram">📱</a>
-        <a href="#" class="float-icon vk-disabled" title="ВК (скоро)">📘</a>
-        <a href="https://t.me/Ivanka58" target="_blank" class="float-icon" title="Техподдержка">🛠️</a>
-    </div>
+    <!-- Футер с иконками -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="tel:+79494010811" class="footer-icon" title="Позвонить">📞</a>
+                <a href="https://t.me/ZaharSok" target="_blank" class="footer-icon" title="Telegram">
+                    <img src="logotg.svg" alt="Telegram" class="social-logo">
+                </a>
+                <a href="#" class="footer-icon" title="ВК (скоро)">
+                    <img src="logovk.svg" alt="ВКонтакте" class="social-logo">
+                </a>
+                <a href="https://t.me/Ivanka58" target="_blank" class="footer-icon" title="Техподдержка">🎧</a>
+            </div>
+            <p class="footer-phone">+7 949 401 08 11</p>
+            <p class="small">© Доставка воды Донецк — чистая вода для вашего дома</p>
+        </div>
+    </footer>
 
-    <!-- Круг техподдержки (появляется при скролле) -->
-    <div class="support-circle" id="supportCircle" style="display: none;">
-        <div class="support-bubble" id="supportBubble">Какбудто прям сейчас печатают...</div>
-        <div class="support-icon" id="supportIcon">💬</div>
-    </div>
-
-    <!-- Модальное окно для воды -->
+    <!-- Модальные окна -->
     <div id="waterModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h3>Оформить заказ воды</h3>
+            <h3>💧 Оформить заказ воды</h3>
             <div class="modal-buttons">
-                <a href="https://t.me/ZaharSok" target="_blank" class="modal-option telegram">📱 Заказать в Telegram</a>
-                <button class="modal-option vk" id="vkTempBtn">📘 Заказать в ВК (скоро)</button>
+                <a href="https://t.me/ZaharSok" target="_blank" class="modal-option telegram">
+                    <img src="logotg.svg" alt="TG" class="modal-logo"> Заказать в Telegram
+                </a>
+                <button class="modal-option vk" id="vkTempBtn">
+                    <img src="logovk.svg" alt="VK" class="modal-logo"> Заказать в ВК (скоро)
+                </button>
                 <a href="tel:+79494010811" class="modal-option phone">📞 Заказать по номеру телефона</a>
             </div>
         </div>
     </div>
 
-    <!-- Модальное окно для грузоперевозок -->
     <div id="cargoModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h3>Заказать грузоперевозку</h3>
+            <h3>🚚 Заказать грузоперевозку</h3>
             <div class="modal-buttons">
-                <a href="https://t.me/ZaharSok" target="_blank" class="modal-option telegram">📱 Заказать в Telegram</a>
-                <button class="modal-option vk" id="vkCargoTempBtn">📘 Заказать в ВК (скоро)</button>
+                <a href="https://t.me/ZaharSok" target="_blank" class="modal-option telegram">
+                    <img src="logotg.svg" alt="TG" class="modal-logo"> Заказать в Telegram
+                </a>
+                <button class="modal-option vk" id="vkCargoTempBtn">
+                    <img src="logovk.svg" alt="VK" class="modal-logo"> Заказать в ВК (скоро)
+                </button>
                 <a href="tel:+79494010811" class="modal-option phone">📞 Заказать по номеру телефона</a>
             </div>
         </div>
     </div>
 
-    <!-- Модальное окно для города (стоимость) -->
     <div id="cityModal" class="modal">
-        <div class="modal-content city-modal-content">
+        <div class="modal-content">
             <span class="close">&times;</span>
             <h3 id="cityModalTitle">Донецк → Город</h3>
             <p id="cityModalPrice" class="city-price">Приблизительная стоимость: уточняйте</p>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© Доставка воды Донецк — чистая вода для вашего дома</p>
-            <a href="tel:+79494010811" class="footer-phone">+7 949 401 08 11</a>
-            <p class="small">Работаем для вас ежедневно</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
