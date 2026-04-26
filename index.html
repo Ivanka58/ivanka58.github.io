@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Доставка технической воды Донецк | АкваДелив</title>
+    <title>Чистая вода Донецк | Доставка воды и грузоперевозки</title>
     
-    <!-- Иконка в адресной строке (favicon) -->
+    <!-- Favicon - логотип во вкладке браузера -->
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -18,10 +19,11 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-icon">
-                    <div class="water-icon">💧</div>
+                    <img src="logo.png" alt="Логотип" class="main-logo">
                 </div>
-                <h1 class="hero-title">Доставка технической воды <span>в Донецке</span></h1>
+                <h1 class="hero-title">Доставка <span>ЧИСТОЙ воды</span><br>в Донецке</h1>
                 
+                <!-- Слоган с анимацией печати -->
                 <div class="slogan-rotator">
                     <div class="slogan-text" id="typingSlogan"></div>
                 </div>
@@ -30,7 +32,13 @@
                     <div class="feature-card">🚛 До 2 кубов воды за раз</div>
                     <div class="feature-card">💧 От 100 литров</div>
                     <div class="feature-card">🏢 До 14 этажа</div>
-                    <div class="feature-card">📍 Любые районы Донецка</div>
+                    <div class="feature-card">📍 Донецк + Макеевка</div>
+                </div>
+
+                <!-- Пояснение про чистую воду -->
+                <div class="water-quality">
+                    <span class="quality-badge">💧 ЧИСТАЯ ВОДА</span>
+                    <p class="quality-text">Не техническая, не из речки — очищенная водопроводная вода. Подходит для питья, готовки и домашнего использования.</p>
                 </div>
 
                 <div class="order-block">
@@ -41,38 +49,6 @@
                         <span class="phone-hint">Нажмите на номер, чтобы позвонить</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- НОВЫЙ КРАСИВЫЙ БЛОК С ОПИСАНИЕМ (ТЕХНИЧЕСКАЯ ВОДА) -->
-    <section class="info-cards">
-        <div class="container">
-            <h2 class="section-title">Техническая вода <span>с доставкой по Донецку</span></h2>
-            <div class="cards-grid">
-                <div class="info-card">
-                    <div class="info-icon">🏭</div>
-                    <h3>Для чего подходит</h3>
-                    <p>Отопление, мойка, стройка, полив, производство, заправка оборудования — идеально для технических нужд.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">📦</div>
-                    <h3>Объёмы доставки</h3>
-                    <p>От 100 литров до 2 кубов за рейс. Под заказ — больше объёма. Работаем с частниками и бизнесом.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">📍</div>
-                    <h3>Районы Донецка</h3>
-                    <p>Киевский, Куйбышевский, Кировский, Петровский, Ленинский, Будённовский, Ворошиловский, Калининский, Пролетарский.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">💵</div>
-                    <h3>Оплата без предоплаты</h3>
-                    <p>После доставки — наличные или на карту. Прозрачно и без скрытых платежей.</p>
-                </div>
-            </div>
-            <div class="info-text-bottom">
-                <p>Техническая вода — это экономичное решение для дома, стройки и бизнеса. Не содержит примесей, подходит для технических узлов, уборки, отопления и производственных процессов. <strong>Звоните или пишите в Telegram</strong> — привезём в удобное время.</p>
             </div>
         </div>
     </section>
@@ -105,57 +81,46 @@
                     <h3>🚚 Межгород</h3>
                     <div class="route-list">
                         <div class="route-item city-modal-trigger" data-city="donetsk-mariupol">Донецк → Мариуполь</div>
+                        <div class="route-item city-modal-trigger" data-city="donetsk-rostov">Донецк → Ростов-на-Дону</div>
                         <div class="route-item city-modal-trigger" data-city="donetsk-urzuf">Донецк → Урзуф</div>
                         <div class="route-item city-modal-trigger" data-city="donetsk-berdyansk">Донецк → Бердянск</div>
-                        <div class="route-item city-modal-trigger" data-city="donetsk-rostov">Донецк → Ростов-на-Дону</div>
                         <div class="route-item city-modal-trigger" data-city="donetsk-krasnodar">Донецк → Краснодар</div>
+                        <div class="route-item city-modal-trigger" data-city="donetsk-starobeshevo">Донецк → Старобешевский р-н</div>
                     </div>
                 </div>
                 <div class="route-group">
                     <h3>🏙️ По городу</h3>
                     <div class="route-list">
-                        <div class="route-item">Любой район Донецка</div>
-                        <div class="route-item">Крупногабаритные грузы</div>
-                        <div class="route-item">Срочная подача</div>
+                        <div class="route-item city-local-trigger" data-local="donetsk-city">Донецк (любой район)</div>
+                        <div class="route-item city-local-trigger" data-local="makeevka">Макеевка</div>
+                        <div class="route-item city-local-trigger" data-local="cargo">Крупногабаритные грузы</div>
+                        <div class="route-item city-local-trigger" data-local="express">Срочная подача</div>
+                    </div>
+                    <div class="local-price-info">
+                        <p>🚚 Подача — от 1 200 ₽</p>
+                        <p>📏 + 65 ₽ за каждый километр</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Районы Донецка + Макеевка -->
+            <div class="districts-list">
+                <h4>📍 Районы, которые мы обслуживаем:</h4>
+                <div class="districts-grid">
+                    <span>Будённовский</span> <span>Ворошиловский</span> <span>Калининский</span>
+                    <span>Киевский</span> <span>Кировский</span> <span>Куйбышевский</span>
+                    <span>Ленинский</span> <span>Петровский</span> <span>Пролетарский</span>
+                    <span>А также Макеевка (все районы)</span>
+                </div>
+            </div>
+
             <div class="cargo-contact">
                 <button class="btn btn-secondary" id="openCargoModalBtn">📦 Заказать грузоперевозку</button>
             </div>
         </div>
     </section>
 
-        <!-- Блок с частыми вопросами (FAQ) -->
-    <section class="faq">
-        <div class="container">
-            <h2 class="section-title">Частые вопросы <span>о технической воде</span></h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">❓ Можно ли заливать техническую воду в систему отопления?</div>
-                    <div class="faq-answer">Да. Наша техническая вода не содержит примесей, солей и хлора, поэтому безопасна для котлов, радиаторов и труб.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">❓ Как заказать доставку воды в Донецке?</div>
-                    <div class="faq-answer">Позвоните по телефону +7 949 401 08 11 или напишите в Telegram по ссылке внизу сайта. Принимаем заявки с 9:00 до 20:00.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">❓ Есть ли доставка в субботу и воскресенье?</div>
-                    <div class="faq-answer">Да, возим без выходных. Точное время согласуем при заказе.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">❓ Сколько стоит техническая вода за 1 куб?</div>
-                    <div class="faq-answer">Примерно 2500–3000 ₽ за куб в зависимости от объёма и удалённости района. Точную цену скажем при заказе.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">❓ Можно ли оплатить после доставки?</div>
-                    <div class="faq-answer">Да. Никакой предоплаты — наличные или перевод после того, как вода приедет.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Футер -->
+    <!-- Футер с иконками -->
     <footer class="footer">
         <div class="container">
             <div class="footer-icons">
@@ -163,13 +128,13 @@
                 <a href="https://t.me/ZaharSok" target="_blank" class="footer-icon" title="Telegram">
                     <img src="logotg.svg" alt="Telegram" class="social-logo">
                 </a>
-                <a href="#" class="footer-icon" title="ВК (скоро)">
+                <a href="#" class="footer-icon vk-icon" title="ВК (скоро)">
                     <img src="logovk.svg" alt="ВКонтакте" class="social-logo">
                 </a>
                 <a href="https://t.me/Ivanka58" target="_blank" class="footer-icon" title="Техподдержка">🎧</a>
             </div>
             <p class="footer-phone">+7 949 401 08 11</p>
-            <p class="small">© Доставка технической воды Донецк — надёжно и без предоплаты</p>
+            <p class="small">© Доставка чистой воды Донецк — вода для дома</p>
         </div>
     </footer>
 
@@ -211,6 +176,15 @@
             <span class="close">&times;</span>
             <h3 id="cityModalTitle">Донецк → Город</h3>
             <p id="cityModalPrice" class="city-price">Приблизительная стоимость: уточняйте</p>
+        </div>
+    </div>
+
+    <div id="localModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="localModalTitle">🚚 Городская перевозка</h3>
+            <p id="localModalPrice" class="city-price">Подача от 1 200 ₽ + 65 ₽/км</p>
+            <p class="local-price-note">*Точная стоимость рассчитывается индивидуально</p>
         </div>
     </div>
 
