@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Доставка технической воды Донецк | АкваДелив</title>
-    
+
     <!-- Основной favicon -->
     <link rel="icon" type="image/png" href="logo.png">
-    
-    <!-- Для соцсетей и мессенджеров (чтобы logo показывалось вместо серого глобуса) -->
+
+    <!-- Для соцсетей (чтобы лого показывалось вместо серого глобуса) -->
     <meta property="og:title" content="АкваДелив — доставка технической воды в Донецке">
     <meta property="og:description" content="Чистая техническая вода для дома, производства и стройки. Доставка по Донецку и Макеевке. Оплата после доставки.">
     <meta property="og:image" content="https://aquadeliv-doneck.shop/logo.png">
@@ -16,12 +16,13 @@
     <meta property="og:image:height" content="512">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aquadeliv-doneck.shop">
-    
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- ======================= HERO БЛОК ======================= -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -50,7 +51,7 @@
         </div>
     </section>
 
-    <!-- Карточки с описанием (ЧИСТАЯ техническая вода) -->
+    <!-- ======================= ИНФО-КАРТОЧКИ (ЧИСТАЯ ТЕХНИЧЕСКАЯ ВОДА) ======================= -->
     <section class="info-cards">
         <div class="container">
             <h2 class="section-title">Чистая техническая вода <span>с доставкой</span></h2>
@@ -77,12 +78,12 @@
                 </div>
             </div>
             <div class="info-text-bottom">
-                <p><strong>Чистая техническая вода</strong> — это не «грязная вода из речки». Это водопроводная вода высокого качества, безопасная для домашнего использования, систем отопления, мойки, строительства и производства. <strong>Звоните или пишите в Telegram</strong> — привезём в удобное время.</p>
+                <p><strong>Чистая техническая вода</strong> — это не «грязная вода из речки». Это водопроводная вода высокого качества, безопасная для систем отопления, мойки, строительства и производства. <strong>Звоните или пишите в Telegram</strong> — привезём в удобное время.</p>
             </div>
         </div>
     </section>
 
-    <!-- Акция -->
+    <!-- ======================= АКЦИЯ С ТАЙМЕРОМ ======================= -->
     <section class="promo-timer">
         <div class="container">
             <div class="timer-card">
@@ -99,12 +100,11 @@
         </div>
     </section>
 
-    <!-- Услуги грузоперевозок (ТОЧНЫЕ ЦЕНЫ) -->
+    <!-- ======================= ГРУЗОПЕРЕВОЗКИ (ТОЧНЫЕ ЦЕНЫ) ======================= -->
     <section class="cargo">
         <div class="container">
             <h2 class="section-title">Услуги <span>грузоперевозок</span></h2>
             <p class="cargo-desc">Надёжные перевозки по городу и на дальние расстояния</p>
-            
             <div class="city-routes">
                 <div class="route-group">
                     <h3>🚚 Межгород (от)</h3>
@@ -121,7 +121,7 @@
                     <h3>🏙️ По городу (Донецк + Макеевка)</h3>
                     <div class="route-list">
                         <div class="route-item">✅ Подача — от 1 200 ₽</div>
-                        <div class="route-item">✅ Далее — от 65 ₽/км</div>
+                        <div class="route-item">✅ Далее — 65 ₽/км</div>
                         <div class="route-item">✅ Крупногабаритные грузы</div>
                         <div class="route-item">✅ Срочная подача</div>
                         <div class="route-item">✅ Любой район Донецка и Макеевки</div>
@@ -134,7 +134,7 @@
         </div>
     </section>
 
-    <!-- FAQ (частые вопросы) -->
+    <!-- ======================= ЧАСТЫЕ ВОПРОСЫ (FAQ) ======================= -->
     <section class="faq">
         <div class="container">
             <h2 class="section-title">Частые вопросы <span>о технической воде</span></h2>
@@ -163,6 +163,41 @@
         </div>
     </section>
 
+    <!-- ======================= ОТЗЫВЫ КЛИЕНТОВ (СУПАБАС) ======================= -->
+    <section class="reviews-section" id="reviewsSection">
+        <div class="container">
+            <h2 class="section-title">Отзывы <span>наших клиентов</span></h2>
+            <div class="reviews-list" id="reviewsList">
+                <div class="reviews-loading">Загрузка отзывов...</div>
+            </div>
+            <div class="review-form-card">
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <input type="text" id="reviewName" placeholder="Ваше имя *" class="form-input">
+                        <div class="form-error" id="nameError">Это обязательное поле</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="rating-label">Ваша оценка *</div>
+                        <div class="star-rating" id="starRating">
+                            <span data-value="1">☆</span>
+                            <span data-value="2">☆</span>
+                            <span data-value="3">☆</span>
+                            <span data-value="4">☆</span>
+                            <span data-value="5">☆</span>
+                        </div>
+                        <div class="form-error" id="ratingError">Выберите оценку</div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="reviewComment" rows="3" placeholder="Ваш отзыв (по желанию)" class="form-input"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-review">📝 Отправить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= ФУТЕР ======================= -->
     <footer class="footer">
         <div class="container">
             <div class="footer-icons">
@@ -180,7 +215,7 @@
         </div>
     </footer>
 
-    <!-- Модальные окна (оставляем как есть) -->
+    <!-- ======================= МОДАЛЬНЫЕ ОКНА ======================= -->
     <div id="waterModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -215,6 +250,9 @@
         </div>
     </div>
 
+    <!-- Подключаем скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="reviews.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
