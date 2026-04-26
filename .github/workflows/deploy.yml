@@ -1,0 +1,22 @@
+name: Deploy with Supabase
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Inject Supabase secrets into reviews.js
+        run: |
+          sed -i "s|window.SUPABASE_URL = '';|window.SUPABASE_URL = '${{ secrets.SUPABASE_URL }}';|g" reviews.js
+          sed -i "s|window.SUPABASE_ANON_KEY = '';|window.SUPABASE_ANON_KEY = '${{ secrets.SUPABASE_ANON_KEY }}';|g" reviews.js
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
