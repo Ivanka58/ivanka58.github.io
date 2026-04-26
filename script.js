@@ -96,11 +96,12 @@ window.onclick = (e) => {
 
 // === Города с ценами ===
 const cityPrices = {
-    'donetsk-mariupol': { title: 'Донецк → Мариуполь', price: '≈ 5 500 ₽' },
-    'donetsk-urzuf': { title: 'Донецк → Урзуф', price: '≈ 6 200 ₽' },
-    'donetsk-berdyansk': { title: 'Донецк → Бердянск', price: '≈ 7 000 ₽' },
-    'donetsk-rostov': { title: 'Донецк → Ростов-на-Дону', price: '≈ 9 500 ₽' },
-    'donetsk-krasnodar': { title: 'Донецк → Краснодар', price: '≈ 14 000 ₽' }
+    'donetsk-mariupol': { title: 'Донецк → Мариуполь', price: 'от 8 999 ₽' },
+    'donetsk-urzuf': { title: 'Донецк → Урзуф', price: 'от 12 999 ₽' },
+    'donetsk-berdyansk': { title: 'Донецк → Бердянск', price: 'от 13 999 ₽' },
+    'donetsk-rostov': { title: 'Донецк → Ростов-на-Дону', price: 'от 14 999 ₽' },
+    'donetsk-krasnodar': { title: 'Донецк → Краснодар', price: 'от 34 999 ₽' }
+    'donetsk-star': { title: 'Донецк → Стараюешевский', price: 'от 3 999' }
 };
 document.querySelectorAll('.city-modal-trigger').forEach(el => {
     el.addEventListener('click', () => {
